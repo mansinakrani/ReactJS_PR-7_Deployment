@@ -17,7 +17,7 @@ npm start
 ```
 
 ## Demo 
-[Image]()
+[Image](https://github.com/mansinakrani/ReactJS_PR-7_Deployment/blob/f753d455fb5166c12081dbc1ff324b05325a7f05/practical-7_demo.png)
 
 # Website URLs
 Deployed on different platforms :-
@@ -28,4 +28,4 @@ Deployed on different platforms :-
 [Practical - 7](https://github.com/mansinakrani/ReactJS_PR-7_Deployment.git)
 
 ## PR Link
-[Pull-Request]() 
+[Pull-Request](https://github.com/mansinakrani/ReactJS_PR-7_Deployment/pull/1#issue-1163871955) 
