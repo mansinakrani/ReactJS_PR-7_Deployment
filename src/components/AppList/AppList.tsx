@@ -30,7 +30,8 @@ export const AppList = () => {
     const [error, setError] = useState('');
 
    const fetchUsers = async (pageNumber: number) => {
-        await fetch(`https://reqres.in/api/users?page=${pageNumber}`)
+     // console.log(process.env);
+     await fetch(`${process.env.REACT_APP_UNSPLASH_URL}?page=${pageNumber}`)
           .then((res) => { 
               if(res.ok) 
               return res.json();
