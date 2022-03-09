@@ -20,7 +20,8 @@ npm start
 [Image]()
 
 # Website URLs
-[Firebase CLI]()
+Deployed on different platforms :-
+[Firebase CLI](https://react-mn-pr-7.web.app/)
 [netlify](https://eager-nobel-b52ce7.netlify.app/)
 
 ## Repo Link
