@@ -1,0 +1,69 @@
+/**** User List*****/
+.content {
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    background-color: white;
+    padding: 20px 30px;
+    justify-content: space-between;
+  }
+
+.user-list {
+  width: 70%;
+  padding: 20px;
+  display: flex;
+}
+  
+/* table stylings */
+table {
+  width: 70%;
+}
+  
+th {
+  text-align: left;
+}
+  
+th,td {
+  padding: 10px 10px;
+}
+  
+.user {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  flex-direction: row;
+}
+  
+.user img {
+  width: 40px;
+  height: 40px;
+  grid-row: 1 / 3;
+  border-radius: 20px;
+  margin-right: 12px;
+}
+  
+  .user-name {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-left: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  .fname {
+    font-weight: 700;
+  }
+  .active {
+    color: rgb(43, 149, 7);
+    font-weight: bold;
+  }
+  
+  .user-status select {
+    padding: 10px;
+    border-radius: 10%;
+  }
+  .user-access select {
+    padding: 10px;
+    border-radius: 10%;
+  }
+  

@@ -1,0 +1,18 @@
+.App {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.user-info {
+  /*  float: inline-end;*/
+    position: relative;
+    width: 30%;
+  }
+
+.userList {
+   /* float: inline-start;*/
+    width: 70%;
+}
