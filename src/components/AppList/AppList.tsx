@@ -31,7 +31,7 @@ export const AppList = () => {
 
    const fetchUsers = async (pageNumber: number) => {
      // console.log(process.env);
-     await fetch(`${process.env.REACT_APP_UNSPLASH_URL}?page=${pageNumber}`)
+     await fetch(`${process.env.REACT_APP_URL}?page=${pageNumber}`)
           .then((res) => { 
               if(res.ok) 
               return res.json();
