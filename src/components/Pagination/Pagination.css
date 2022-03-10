@@ -1,0 +1,14 @@
+.Pagination {
+    display: inline-flex;
+    align-self: center;
+}
+
+.Pagination span {
+  border-style: inset;
+  border-color: rgb(143, 128, 198); 
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.Pagination span:hover {
+  background-color: rgba(25, 0, 255, 0.2);
+}

@@ -1,47 +1,66 @@
-# Getting Started with Create React App
+# Practical-7 :  Deployment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Getting Started
 
-## Available Scripts
+Clone this repo and install dependencies with
 
-In the project directory, you can run:
+```bash
+  npm install
+```
 
-### `npm start`
+## Starting The Dev Server
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To start the server and start hacking, run
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+npm start
+```
+## Description
+# Customizing Environment Variables for build Environments
 
-### `npm test`
+We can create an arbitrary build environment by creating a custom .env file and loading it using env-cmd.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For example, to create a build environment :
 
-### `npm run build`
+1. Create a file called .env
+2. Set environment variables as we would any other .env file
+3. Install env-cmd 
+    $ npm install env-cmd --save
+4. Add a new script to your package.json, building with new environment:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+{
+  "scripts": {
+    "build": "env-cmd -f .env npm run build"
+  }
+}
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+OR
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+{
+  "scripts": {
+    "build": "react-scripts build",
+    "build:staging": "REACT_APP_STAGE=staging npm run build",
+    "build:production": "env-cmd -f .env.production npm run build",
+    ...
+  }
+}
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+We can run npm run build to build with the staging environment. We can specify other environments in the same way.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+NOTE :-
+Entry for .env.staging and .env.production (.env files for each environment) should be added to the revision control ignore list (e.g. .gitignore) as it should not be checked in.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Demo 
+[Image](https://github.com/mansinakrani/ReactJS_PR-7_Deployment/blob/f753d455fb5166c12081dbc1ff324b05325a7f05/practical-7_demo.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Website URLs
+Deployed on different platforms :-
+[Firebase CLI](https://react-mn-pr-7.web.app/)
+[netlify](https://eager-nobel-b52ce7.netlify.app/)
 
-## Learn More
+## Repo Link
+[Practical - 7](https://github.com/mansinakrani/ReactJS_PR-7_Deployment.git)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-# ReactJS_PR-7_Deployment
+## PR Link
+[Pull-Request](https://github.com/mansinakrani/ReactJS_PR-7_Deployment/pull/1#issue-1163871955) 
