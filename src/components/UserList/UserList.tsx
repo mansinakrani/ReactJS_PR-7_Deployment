@@ -58,7 +58,7 @@ interface Props {
                                     </td>
     
                                     <td>
-                                        <div className='user-access'>
+                                        <div className='user-status'>
                                             <div>Owner</div>         
                                         </div>
                                     </td>
@@ -102,7 +102,7 @@ interface Props {
                                 </td>
 
                                 <td>
-                                    <div className='user-access'>
+                                    <div className='user-status'>
                                         <select value={user.access}>
                                             <option value="Manager">Manager</option>
                                             <option value="Read">Read</option>
@@ -125,7 +125,7 @@ interface Props {
 
                             <tfoot>
                                 <tr>
-                                    <td colSpan={4} align="center" className="Pagination-body">
+                                    <td colSpan={4} align="center" >
                                      <Pagination paginationItems={props.paginationItems} />
                                     </td>
                                 </tr>

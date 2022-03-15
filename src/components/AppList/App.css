@@ -7,12 +7,10 @@
 }
 
 .user-info {
-  /*  float: inline-end;*/
     position: relative;
     width: 30%;
   }
 
 .userList {
-   /* float: inline-start;*/
     width: 70%;
 }

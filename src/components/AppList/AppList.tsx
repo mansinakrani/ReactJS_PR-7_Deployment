@@ -1,8 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState } from 'react'
 import "./App.css";
 import UserInfo from '../UserInfo/UserInfo';
 import { UserList } from '../UserList/UserList';
+import { useDispatch, useSelector } from 'react-redux';
+import { setUsers } from '../redux/actions/UserListAction';
+import { RootState } from '../redux/reducers';
 
 interface user {
     id: number;
@@ -23,24 +25,23 @@ type json = {
     data: [];
   };
 export const AppList = () => {
+    const users = useSelector((state: RootState) => state.allUsers.users);
+    const dispatch = useDispatch();
     const [user, setUser] = useState<user | null>(null);
-    const [users, setUsers] = useState<[]>([]); // for fetch the data
     const [userDetails, setUserDetails] = useState<json>({} as json);
     const [paginationItems, setPaginationItems] = useState<JSX.Element[]>();
-    const [error, setError] = useState('');
 
    const fetchUsers = async (pageNumber: number) => {
-     // console.log(process.env);
      await fetch(`${process.env.REACT_APP_URL}?page=${pageNumber}`)
           .then((res) => { 
               if(res.ok) 
               return res.json();
                })
           .then((res: json) => {
-            setUsers(res.data);
             setUserDetails(res);
+            dispatch(setUsers(res.data));
           })
-          .catch((error: string) => setError("Something went wrong!"));
+          .catch((error: string) => {return error;});
       };
     
       useEffect(() => {

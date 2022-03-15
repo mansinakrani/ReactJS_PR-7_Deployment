@@ -4,7 +4,10 @@ interface userprops {
     info: { id: number; first_name: string; last_name: string; email: string; avatar: string; status: string;} | null;
 }
 const UserInfo = (props: userprops) => {
- 
+    const clickView = () => {
+        return Math.floor(Math.random() * 5000);
+      }
+      const process: number = clickView();
   return (
     <>
     {props.info !== null && (
@@ -30,12 +33,12 @@ const UserInfo = (props: userprops) => {
             </div>
             <div className='click'>
                 <div className='reviewed-clicks'>
-                    <h2>2,450</h2>
+                    <h2>{process}</h2>
                     <p>Clicks Reviewed</p>
                 </div>
                 <div className="vertical"></div>
                 <div className='monthly-clicks'>
-                    <h2>5000</h2>
+                    <h2>{process}</h2>
                     <p>Monthly Clicks</p>
                 </div>
             </div>

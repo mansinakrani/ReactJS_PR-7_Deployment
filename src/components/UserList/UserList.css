@@ -6,7 +6,7 @@
     background-color: white;
     padding: 20px 30px;
     justify-content: space-between;
-  }
+}
 
 .user-list {
   width: 70%;
@@ -42,28 +42,30 @@ th,td {
   margin-right: 12px;
 }
   
-  .user-name {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    padding-left: 20px;
-    font-size: 14px;
-    opacity: 0.8;
-  }
-  .fname {
-    font-weight: 700;
-  }
-  .active {
-    color: rgb(43, 149, 7);
-    font-weight: bold;
-  }
+.user-name {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-left: 20px;
+  font-size: 14px;
+  opacity: 0.8;
+}
   
-  .user-status select {
-    padding: 10px;
-    border-radius: 10%;
-  }
-  .user-access select {
-    padding: 10px;
-    border-radius: 10%;
-  }
+.fname {
+  font-weight: 700;
+}
+
+.active {
+  color: rgb(43, 149, 7);
+  font-weight: bold;
+}
   
+.user-status select {
+  padding: 10px;
+  border-radius: 10%;
+  background-color: lightsteelblue;
+}
+
+.user-icon:hover {
+color: rgb(235, 59, 59);
+}
